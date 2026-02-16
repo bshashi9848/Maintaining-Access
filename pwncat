@@ -1,0 +1,55 @@
+pwncat
+Fancy reverse and bind shell handler
+
+Maintaining Access
+Description
+pwncat is a post-exploitation platform for Linux and Windows targets. It features automated enumeration and persistence modules.
+
+Installation / Check
+Check if installed:
+
+which pwncat
+Install command:
+
+pip install pwncat-cs
+Basic Syntax
+pwncat-cs [options]
+Common Commands
+Command	What it does	When to use	Risk
+pwncat-cs -lp 4444
+
+Start listener	Catch reverse shell	
+run enumerate
+
+Auto enumeration	Gather system info	
+run persist.cron
+
+Cron persistence	Maintain access	
+upload local remote
+
+Upload file	Transfer files	
+privesc.auto
+
+Auto privesc	Escalate privileges	
+Step-by-Step Guide
+1
+Start listener
+2
+Receive shell connection
+3
+Run enumeration
+4
+Use modules for tasks
+5
+Establish persistence
+Understanding the Output
+Rich terminal interface with modules for post-exploitation.
+
+Important Warnings
+•
+Advanced post-exploitation tool
+•
+Persistence is illegal without permission
+•
+Use on authorized systems only
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
